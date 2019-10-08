@@ -1,620 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
-  <title>Vicious Pictures</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link rel="icon" 
-      type="image/png" 
-      href="logo.jpg">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <style>
-  body {
-    font: 400 15px Lato, sans-serif;
-    line-height: 1.8;
-    color: #818181;
-  }
-  h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
-  }
-  h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    color: #303030;
-    font-weight: 400;
-    margin-bottom: 30px;
-  }  
-  .jumbotron {
-    /*background-image: url("logo.jpg");*/
-    background-color: #f0f3f7;
-    color:black;
-    padding: 100px 25px;
-    font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-    padding: 60px 50px;
-  }
-  .bg-grey {
-    background-color: #f6f6f6;
-  }
-  .logo-small {
-    color: black;
-    font-size: 50px;
-  }
-  .logo {
-    color: black;
-    font-size: 200px;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-  }
-  .thumbnail img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-    background-image: none;
-    color: #f4511e;
-  }
-  .carousel-indicators li {
-    border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-    background-color: #f4511e;
-  }
-  .item h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
-    margin: 70px 0;
-  }
-  .item span {
-    font-style: normal;
-  }
-  .panel {
-    border: 1px solid black; 
-    border-radius:0 !important;
-    transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-    border: 1px solid black;
-    background-color: black !important;
-    color: #f4511e;
-  }
-  .panel-heading {
-    color: black !important;
-    background-color: #f0f3f7 !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-    background-color: white !important;
-  }
-  .panel-footer h3 {
-    font-size: 32px;
-  }
-  .panel-footer h4 {
-    color: #aaa;
-    font-size: 14px;
-  }
-  .panel-footer .btn {
-    margin: 15px 0;
-    background-color: black;
-    color: #fff;
-  }
-  .person {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-    opacity: 0.7;
-  }
-  .person:hover {
-    border-color: #f4511e;
-  }
-  .navbar {
-    margin-bottom: 0;
-    background-color: black;
-    color: black;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: Montserrat, sans-serif;
-  }
-  .navbar-brand{
-    padding: 0px;
-  }
-  .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-  }
-  footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #f4511e;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-      width: 100%;
-      margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-      font-size: 150px;
-    }
-  }
-  .carousel-inner img {
-   /* -webkit-filter: grayscale(90%);
-    filter: grayscale(90%);*/ /* make all photos black and white */ 
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-  }
-  .carousel-caption h3 {
-    color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  </style>
+    <meta charset="utf-8">
+    <title>GLOBAL RESOURCING & SUPPLIES</title>
+    <meta name="author" content="Malle Mashego">
+
+    <!-- SEO -->    <meta name="description" content="Providing all the Thermal Rolls you may need.">
+    <meta name="keywords" content="Till Roll, Credit Card, Airtime Slips, Betting Shops">
+<!-- Favicons -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- Responsive Tag -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/plugin.css">
+    <link rel="stylesheet" href="main.css">
+
+    <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="index.html"><img src="logo.jpg" alt="logo" style="width:75px; height:50px"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="services.html">SERVICES</a></li>
-        <li><a href="portfolio.html">PORTFOLIO</a></li>
-        <li><a href="pricing.html">PRICING</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="doctor.jpg" alt="New York" width="1200" height="700">
-        <div class="carousel-caption">
-          <!-- <h3>WINTER EDITION</h3> -->
-          <!-- <p>Vicious Pictures</p> -->
-        </div>      
-      </div>
-
-      <div class="item">
-        <img src="guy.jpg" alt="Chicago" width="1200" height="700">
-        <div class="carousel-caption">
-          <!-- <h3>STYLE</h3> -->
-          <!-- <p>Vicious Pictures</p> -->
-        </div>      
-      </div>
-    
-      <div class="item">
-        <img src="girl.jpg" alt="Los Angeles" width="1200" height="700">
-        <div class="carousel-caption">
-          <!-- <h3>RAINY DAYS</h3> -->
-          <!-- <p>Vicious Pictures</p> -->
-        </div>      
-      </div>
-    </div>
-
-<!--- <div class="jumbotron text-center">
-
-  <h1>Vicious Pictures</h1> 
-  <p>We specialize in Photography and Videography</p> 
-  <form>
-    <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Send</button>
-      </div>
-    </div>
-  </form>
-</div> --->
-
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>About</h2><br>
-      <h4>Innovative, Creative, Multimedia Services</h4><br>
-      <p>Vicious Pictures is a Video Production and Photography Company providing services to the events. The company was established in 2017 and has proven itself as a trusted service provider.</p>
-      <br>
-      <p>We are a dedicated team of videographers and photographers led by the director and founder Steve Siboza who is young innovator, creative and passionate cinematographer and photographer has been featured in few local TV commercials for MTN, VODACOM, CELL C and AFCON etc.</p><br>
-      <p>We have a strong, healthy relationship with marketing companies, local retail stores, brands and event planners both in public and private sector. We pride ourselves in having the most fresh, authentic innovative approach, resulting in delivering a world class experience with every project we execute.</p><br>
-      <button class="btn btn-default btn-lg">Get in Touch</button>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
-    </div>
-  </div>
-</div>
-
-<!-- <div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong>Our Mission at Vicious Pictures Blah Blah Blah Blah</h4><br>
-      <p><strong>VISION:</strong>Vivious Pictures Blah Blah Blah .</p>
-    </div>
-  </div>
-</div> -->
-
-<!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
-  <h2>SERVICES</h2>
-  <h4></h4>
-  <br>
-  <div class="row slideanim">
-    <!-- <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
-      <h4>POWER</h4>
-      <p></p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>LOVE</h4>
-      <p></p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p></p>
-    </div>
-  </div>
-  <br><br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p></p>
-    </div -->
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="video5.jpg" alt="Photoshoot" width="400" height="300">
-        <p><strong>Video Production</strong></p>
-        <!-- <p>Conferences and Events</p>
-        <p>Conferences and Events</p>
-        <p>Conferences and Events</p>
-        <p>Conferences and Events</p> -->
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="cinema3.jpg" alt="Photoshoot" width="400" height="300">
-        <p><strong>Home of Cinematic images</strong></p>
-        <p></p>
-      </div>
-    </div>
-     <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="camera3.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Photography</strong></p>
-        <!-- <p>Conferences and Events</p>
-        <p>Conferences and Events</p>
-        <p>Conferences and Events</p>
-        <p>Conferences and Events</p> -->
-      </div>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-
-
-<div class="container-fluid bg-grey">
-  <div class="row">
-  <h2>PORTFOLIO</h2>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>JC MODELS</strong></p><br>
-      <a href="jcmodels.html">
-        <img src="girl.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <!-- <div id="demo" class="collapse">
-        <p>Photographer/Graphic Desiger</p>
-        <p>Taking Pictures is his passion</p>
-        <p>Member Since 2015</p>
-      </div> -->
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>TECHNOSERVE</strong></p><br>
-      <a href="technoserve.html">
-        <img src="doctor.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <!-- <div id="demo2" class="collapse">
-        <p>IT Specialist/Graphic Desiger</p>
-        <p>Inlove With Computers</p>
-        <p>Member since 2015</p>
-      </div> -->
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>THE BOX SHOP</strong></p><br>
-      <a href="boxshop.html">
-        <img src="guy.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <!-- <div id="demo3" class="collapse">
-        <p>IT Specialist/Graphic Desiger</p>
-        <p>Inlove With Computers</p>
-        <p>Member since 2015</p>
-      </div> -->
-    </div>
-  </div>
-
-<div class="row"> 
-  <h2>What our customers say</h2>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <h4>"They are young talented creatives and they
-            have the right attitude. That’s what stands
-            out for me from Vicious Pictures".<br><span>SFISO MOYO – Managing Director Technoserve</span></h4>
-      </div>
-      <div class="item">
-        <h4>“I wanted my Gala dinner to be broadcasted live
-        and to accommodate my customers and Vicious
-        Pictures made it possible.<br><span>Kenny Majozi – Owner at EMZWINKINI PUB & GRILL</span></h4>
-      </div>
-      <div class="item">
-        <h4>“I don’t have any worry about photography anymore,
-            they are punctual and their photo magazines are
-          amazing my clients love them”.<span>TEBOGO Maduna – founder of KATLEHO BUSINESS FORUM</span></h4>
-      </div>
-      <div class="item">
-        <h4>“Punctual, professionalism creativity, they videos and
-        photography are amazing and I have never seen such
-        quality at a reasonable price”.<span>RUSSEL BALOYI – CHAIRPERSON EKURHULENI YOUTH LEAGUE</span></h4>
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-</div>
-
-<!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
-  <div class="text-center">
-    <h2>Pricing</h2>
-    <h4>choose what event we should cater for you!.</h4>
-  </div>
-  <div class="row slideanim">
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Event</h1>
+    <!-- Preloder-->
+    <div class="preloder animated">
+        <div class="scoket">
+            <img src="img/preloader.svg" alt="" />
         </div>
-        <div class="panel-body">
-          <p><strong>20</strong> </p>
-          <p><strong>15</strong></p>
-          <p><strong>5</strong> </p>
-          <p><strong>2</strong></p>
-          <p><strong></strong></p>
-        </div>
-        <div class="panel-footer">
-          <h3>R500.00</h3>
-          <h4>per event</h4>
-          <!-- <button class="btn btn-lg">Sign Up</button> -->
-        </div>
-      </div>      
-    </div>     
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Wedding</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>50</strong></p>
-          <p><strong>25</strong></p>
-          <p><strong>10</strong></p>
-          <p><strong>5</strong></p>
-          <p><strong></strong></p>
-        </div>
-        <div class="panel-footer">
-          <h3>R700.00</h3>
-          <h4>per Wedding</h4>
-          <!-- <button class="btn btn-lg">Sign Up</button> -->
-        </div>
-      </div>      
-    </div>       
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Photoshoot</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>100</strong></p>
-          <p><strong>50</strong></p>
-          <p><strong>25</strong></p>
-          <p><strong>10</strong></p>
-          <p><strong></strong></p>
-        </div>
-        <div class="panel-footer">
-          <h3>R1000.00</h3>
-          <h4>per photoshoot</h4>
-          <!-- <button class="btn btn-lg">Sign Up</button> -->
-        </div>
-      </div>      
-    </div>    
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Katlehong, Gauteng, RSA</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
     </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+
+    <div class="body">
+
+        <div class="main-wrapper">
+            <!-- Navigation-->
+            <nav class="navbar navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./index.html" style="font-family: Georgia">
+                            <img src="logo.png" alt="nav-logo">
+                            <!-- GLOBAL RESOURCING & SUPPLIES (PTY) LTD. -->
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                         <ul class="nav navbar-nav navbar-right">
+                            
+                            <!-- <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./menu_grid.html">Menu 1</a></li>                                    <li><a href="./menu_grid-2.html">Menu 2</a></li>
+
+                                    <li><a href="./menu_tile.html">Menu - Tile</a></li>
+                                    <li><a href="./menu_grid.html">Menu - Grid</a></li>
+                                    <li><a href="">Menu All</a></li>
+
+                                </ul>
+                            </li> -->
+							<li><a>REG NO: 2019/256817/07</a></li>
+                            <li><a>BBB-EE LEVEL 1</a></li>
+                        </ul> 
+                    </div>
+                    <!--/.navbar-collapse -->
+                </div>
+            </nav>
+
+            <!-- Page Header -->
+        
+
+
+            <!-- menu-->
+            <section class="menu menu2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-header wow fadeInDown">
+                                <h1>Thermal Till Roll's<small>What we offer</small></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-menu wow fadeInUp">
+                        <div class="row menu-items4">
+                            <div class="menu-item4 col-sm-4 col-xs-12 starter dinner desserts">
+                                <div class="menu-info">
+                                    <img src="airtime.jpg" class="img-responsive" alt="" />
+                                    <a href="">
+                                        <div class="menu4-overlay">
+                                          <h4>Airtime Machine</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="menu-item4 col-sm-4 col-xs-12 starter">
+                                <div class="menu-info">
+                                    <a href="">
+                                        <img src="credit.jpg" class="img-responsive" alt="" />
+                                        <div class="menu4-overlay">
+                                          <h4>Credit Card Machine</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="menu-item4 col-sm-4 col-xs-12 breakfast desserts starter">
+                                <div class="menu-info">
+                                    <a href="">
+                                        <img src="images.jpg" class="img-responsive" alt="" />
+                                        <div class="menu4-overlay">
+                                          <h4> Till Roll</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="menu-item4 col-sm-4 col-xs-12 breakfast">
+                                <div class="menu-info">
+                                    <a href="">
+                                        <img src="betting.jpg" class="img-responsive" alt="" />
+                                        <div class="menu4-overlay">
+                                          <h4>Betting Shops</h4>
+                                          
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="menu-item4 col-sm-4 col-xs-12 lunch starter breakfast">
+                                <div class="menu-info">
+                                    <a href="">
+                                        <img src="barcode.jpg" class="img-responsive" alt="" />
+                                        <div class="menu4-overlay">
+                                          <h4> Printed Stickers with or without Barcodes</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="menu-item4 col-sm-4 col-xs-12">
+                                <div class="menu-info">
+                                    <a href="">
+                                        <img src="labels.jpg" class="img-responsive" alt="" />
+                                        <div class="menu4-overlay">
+                                          <h4> Butcher Labels and Stick on Labels</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- <div class="menu-item4 col-sm-4 col-xs-12 lunch starter breakfast">
+                                <div class="menu-info">
+                                    <a href="">
+                                        <img src="img/menu/1/7.jpg" class="img-responsive" alt="" />
+                                        <div class="menu4-overlay">
+                                          <h4> Banana Bread</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div> -->
+						
+							<div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- subscribe -->
+            
+            <section class="page_header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="text-uppercase">Contact</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form / Info -->
+            <section class="main-content contact-content">
+                <div class="container">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="text-left no-margin-top">Address</h3>
+                                <div class="footer-address contact-info">
+                                    <p><i class="fa fa-map-marker"></i>CNR Knox & Meyer STR, Germiston</p>                                <p><i class="fa fa-phone"></i>Phone:<a href="tel:081 344 0383">(081) 344-0383</a></p>                                <p><i class="fa fa-envelope-o"></i><a href="mailto:info@globalresource.co.za">info@globalresource.co.za</a></p>
+                                    <p><i class="fa fa-facebook-square"></i><a href="https://www.facebook.com/globalresourcingSA" target="_blank">@GlobalResourcingSA</a></p>
+                                </div>
+                                <br>
+
+<!--
+                                <h3 class="text-left no-margin-top">Working hours</h3>
+                                <div class="contact-info text-muted">
+                                    <p>10:00 am to 11:00 pm on Weekdays</p>
+                                    <p>11:00 am to 11:30 pm on Weekends</p>
+                                </div>
+                                <br>
+-->
+
+<!--
+                                <h3 class="text-left no-margin-top">Follow Us</h3>
+                                <div class="contact-social">
+                                    <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                                    <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                                    <a href="http://www.dribbble.com"><i class="fa fa-dribbble"></i></a>
+                                    <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                                </div>
+-->
+                            </div>
+                            <div class="col-md-6">
+                                <form class="contact-form" id="contactForm" action="php/contact.php" method="post">
+                                    <div class="form-group">
+                                        <input class="form-control" name="name" id="name" placeholder="Full Name" type="text" required="required" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="email" name="email" id="email" placeholder="Email Address" required="required" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Subject" type="text" id="subject" name="subject">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" id="message" placeholder="Message" rows="5"></textarea>
+                                    </div>
+                                    <button class="btn btn-default btn-lg btn-block" id="js-contact-btn">Send message</button>
+                                </form>
+                                <div id="js-contact-result" data-success-msg="Form submitted successfully." data-error-msg="Oops. Something went wrong."></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer-->
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <h1>About us</h1>
+                            <p>BLAH BLAH BLAH BLAH BLAH. &rarr;</a>
+                        </div>
+                        <div class="col-md-4  col-sm-6">
+                                <h1>Reach us</h1>
+                            
+                            <div class="footer-address">
+                                <p><i class="fa fa-map-marker"></i>CNR Knox & Meyer Str, Germiston</p>                                <p><i class="fa fa-phone"></i>Phone:<a href="tel:081 344 0383"> (081) 344-0383</a></p>                                <p><i class="fa fa-envelope-o"></i><a href="mailto:info@globalresource.co.za">info@globalresource.co.za</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4  col-sm-6">
+                                <h1>Social Networks</h1>
+                            
+                            <div class="footer-address">
+                                <p><i class="fa fa-facebook-square"></i><a href="https://www.facebook.com/GlobalResourcingSA" target="_blank">@GlobalResourcingSA</a></p>
+                                <p><i class="fa fa-twitter-square"></i><a href="https://www.twitter.com/GlobalResourcingSA" target="_blank">@GlobalResourcingSA</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer - Copyright -->
+                <div class="footer-copyrights">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p><em class="fa fa-copyright"></em>2019. Malle Mashego. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Image of location/map -->
-<!--- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> --->
+    </div> 
 
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Developed by Thabiso Mashego</p>
-</footer>
-
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
-</script>
+    <!-- Javascript -->
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/jquery.flexslider-min.js"></script>
+    <script src="js/vendor/spectragram.js"></script>
+    <script src="js/vendor/owl.carousel.min.js"></script>
+    <script src="js/vendor/velocity.min.js"></script>
+    <script src="js/vendor/velocity.ui.min.js"></script>
+    <script src="js/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="js/vendor/bootstrap-clockpicker.min.js"></script>
+    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+    <script src="js/vendor/isotope.pkgd.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
+    <script src="js/vendor/wow.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/vendor/vegas/vegas.min.js"></script>
+    <script src="js/vendor/jquery.mb.YTPlayer.js"></script>
+    <script src="js/vendor/jquery.stellar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/mc/jquery.ketchup.all.min.js"></script>
+    <script src="js/vendor/mc/main.js"></script>
 
 </body>
+
 </html>
