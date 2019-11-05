@@ -6,8 +6,9 @@ Script  : Contact Form
 
 Version : 1.0
 
-Author  : Malle Mashego
+Author  : Surjith S M
 
+URI     : http://themeforest.net/user/surjithctly
 
  
 
